@@ -1,0 +1,10 @@
+.WeatherCard {
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+
+.Wrapper {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 0 25px;
+}
