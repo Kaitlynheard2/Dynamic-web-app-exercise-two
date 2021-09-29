@@ -18,7 +18,7 @@ function Home() {
       currentTemp: `76`,
       highTemp: `80`,
       humidity: 100,
-      lowTemp: `80`,
+      lowTemp: `60`,
       weatherType: "Cloudy",
       windSpeed: `10mph`,
     }; //returning an object
@@ -26,7 +26,7 @@ function Home() {
 
   return (
     <main classname="App">
-      <header>Weather App</header>
+      <header className="TitleStyle">Weather App</header>
       <WeatherCard
         cloudiness={cloudiness}
         currentTemp={currentTemp}
