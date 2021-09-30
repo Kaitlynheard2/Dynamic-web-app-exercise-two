@@ -6,6 +6,7 @@ function WeatherCard({
   highTemp,
   humidity,
   lowTemp,
+  weatherDescription,
   weatherType,
   windSpeed,
 }) {
@@ -19,24 +20,16 @@ function WeatherCard({
         </div>
       </div>
       <section className="WeatherCard">
-        <p className="DataStyle">
-          <p className="CategoryStyle">Forecast </p>
-          {weatherType}
-        </p>
-        <p className="DataStyle">
-          <p className="CategoryStyle">Overcast </p>
-          {cloudiness}%
-        </p>
+        <p className="CategoryStyle">Forecast </p>
+        <p className="DataStyle">{weatherType}</p>
+        <p className="CategoryStyle">Overcast </p>
+        <p className="DataStyle">{cloudiness}%</p>
       </section>
       <section className="WeatherCard">
-        <p className="DataStyle">
-          <p className="CategoryStyle">Humidity </p>
-          {humidity}%
-        </p>
-        <p className="DataStyle">
-          <p className="CategoryStyle">Wind Speed </p>
-          {windSpeed}
-        </p>
+        <p className="CategoryStyle">Humidity </p>
+        <p className="DataStyle">{humidity}%</p>
+        <p className="CategoryStyle">Wind Speed </p>
+        <p className="DataStyle">{windSpeed}mph</p>
       </section>
     </div>
   );
