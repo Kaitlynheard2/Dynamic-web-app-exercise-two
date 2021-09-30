@@ -4,7 +4,8 @@
 }
 
 .CurrentTempStyle {
-  font-size: 200px;
+  font-size: 230px;
+  text-align: center;
   margin: 0;
 }
 
@@ -19,6 +20,12 @@
 .DataStyle {
   font-size: 50px;
   font-weight: bold;
+}
+
+.DescriptionStyle {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .HighAndLowWrapper {

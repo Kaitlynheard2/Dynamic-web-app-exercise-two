@@ -13,10 +13,11 @@ function WeatherCard({
   return (
     <div className="Wrapper">
       <div className="CurrentTempWrapper">
-        <p className="CurrentTempStyle">{currentTemp}°</p>
+        <p className="CurrentTempStyle">{currentTemp}°C</p>
+        <p className="DescriptionStyle">{weatherDescription}</p>
         <div className="HighAndLowWrapper">
-          <p className="DataStyle">&#8593;{highTemp}°</p>
-          <p className="DataStyle">&#8595;{lowTemp}°</p>
+          <p className="DataStyle">&#8593;{highTemp}°C</p>
+          <p className="DataStyle">&#8595;{lowTemp}°C</p>
         </div>
       </div>
       <section className="WeatherCard">

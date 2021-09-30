@@ -78,6 +78,12 @@ function Home() {
         <p>
           <a href="/?city=tokyo">Tokyo</a>
         </p>
+        <p>
+          <a href="/?city=new&#32;york&#32;city">New York City</a>
+        </p>
+        <p>
+          <a href="/?city=Murrieta">Murrieta</a>
+        </p>
       </header>
 
       <h1 className="TitleStyle">{city}</h1>
