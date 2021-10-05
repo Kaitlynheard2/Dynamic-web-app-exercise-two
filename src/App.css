@@ -3,6 +3,17 @@
   font-weight: bold;
 }
 
+.CitiesWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.CityStyle {
+  color: black;
+}
+
 .CurrentTempStyle {
   font-size: 230px;
   text-align: center;
@@ -42,7 +53,6 @@
 }
 
 .WeatherCard {
-  /*border: 1px solid #000;*/
   border-radius: 8px;
   display: flex;
   flex-direction: column;

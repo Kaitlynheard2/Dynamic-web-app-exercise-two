@@ -71,18 +71,26 @@ function Home() {
 
   return (
     <main className="App">
-      <header>
+      <header className="CitiesWrapper">
         <p>
-          <a href="/?city=paris">Paris</a>
+          <a className="CityStyle" href="/?city=paris">
+            Paris
+          </a>
         </p>
         <p>
-          <a href="/?city=tokyo">Tokyo</a>
+          <a className="CityStyle" href="/?city=tokyo">
+            Tokyo
+          </a>
         </p>
         <p>
-          <a href="/?city=new&#32;york&#32;city">New York City</a>
+          <a className="CityStyle" href="/?city=new&#32;york&#32;city">
+            New York City
+          </a>
         </p>
         <p>
-          <a href="/?city=Murrieta">Murrieta</a>
+          <a className="CityStyle" href="/?city=Murrieta">
+            Murrieta
+          </a>
         </p>
       </header>
 
