@@ -1,4 +1,8 @@
+body {
+  background-color: #c3dfe8;
+}
 .CategoryStyle {
+  color: white;
   font-size: 25px;
   font-weight: bold;
 }
@@ -7,36 +11,47 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  margin: 20px;
 }
 
 .CityStyle {
-  color: black;
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+.CityStyle:hover {
+  font-weight: bold;
 }
 
 .CurrentTempStyle {
+  color: white;
   font-size: 230px;
   text-align: center;
   margin: 0;
 }
 
 .CurrentTempWrapper {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding: 25px;
-  margin: 0;
+  margin: 0 0 100px 0;
 }
 
 .DataStyle {
   font-size: 50px;
   font-weight: bold;
+  color: white;
 }
 
 .DescriptionStyle {
   font-size: 50px;
   font-weight: bold;
   text-align: center;
+  color: white;
 }
 
 .HighAndLowWrapper {
@@ -46,6 +61,7 @@
 }
 
 .TitleStyle {
+  color: rgba(0, 0, 0, 0.5);
   font-size: 100px;
   text-align: center;
   max-width: 2000px;
@@ -53,11 +69,15 @@
 }
 
 .WeatherCard {
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding: 25px;
+}
+
+.WeatherImageWrapper {
+  font-size: 125px;
+  color: white;
 }
 
 .Wrapper {
@@ -68,5 +88,16 @@
   justify-content: space-evenly;
   margin: 0 auto;
   max-width: 2000px;
+  padding: 0 25px;
+}
+
+.Wrapper2 {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
   padding: 0 25px;
 }

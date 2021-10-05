@@ -59,10 +59,10 @@ function Home() {
     if (!weatherData) return {}; //returning early with an empty object
     return {
       cloudiness: weatherData.clouds.all,
-      currentTemp: Math.round(weatherData.main.temp - 273.15),
-      highTemp: Math.round(weatherData.main.temp_max - 273.15),
+      currentTemp: Math.round((weatherData.main.temp - 273.15) * (9 / 5) + 32),
+      highTemp: Math.round((weatherData.main.temp_max - 273.15) * (9 / 5) + 32),
       humidity: weatherData.main.humidity,
-      lowTemp: Math.round(weatherData.main.temp_min - 273.15),
+      lowTemp: Math.round((weatherData.main.temp_min - 273.15) * (9 / 5) + 32),
       weatherDescription: weatherData.weather[0].description,
       weatherType: weatherData.weather[0].main,
       windSpeed: Math.round(weatherData.wind.speed),
@@ -71,27 +71,21 @@ function Home() {
 
   return (
     <main className="App">
-      <header className="CitiesWrapper">
-        <p>
+      <header>
+        <nav className="CitiesWrapper">
           <a className="CityStyle" href="/?city=paris">
             Paris
           </a>
-        </p>
-        <p>
           <a className="CityStyle" href="/?city=tokyo">
             Tokyo
           </a>
-        </p>
-        <p>
           <a className="CityStyle" href="/?city=new&#32;york&#32;city">
             New York City
           </a>
-        </p>
-        <p>
           <a className="CityStyle" href="/?city=Murrieta">
             Murrieta
           </a>
-        </p>
+        </nav>
       </header>
 
       <h1 className="TitleStyle">{city}</h1>
