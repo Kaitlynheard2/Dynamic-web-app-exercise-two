@@ -74,16 +74,16 @@ function Home() {
       <header>
         <nav className="CitiesWrapper">
           <a className="CityStyle" href="/?city=paris">
-            Paris
+            paris
           </a>
           <a className="CityStyle" href="/?city=tokyo">
-            Tokyo
+            tokyo
           </a>
           <a className="CityStyle" href="/?city=new&#32;york&#32;city">
-            New York City
+            new york city
           </a>
           <a className="CityStyle" href="/?city=Murrieta">
-            Murrieta
+            murrieta
           </a>
         </nav>
       </header>

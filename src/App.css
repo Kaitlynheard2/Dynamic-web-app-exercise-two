@@ -1,9 +1,10 @@
 body {
   background-color: #c3dfe8;
 }
+
 .CategoryStyle {
   color: white;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -16,7 +17,7 @@ body {
 }
 
 .CityStyle {
-  font-size: 25px;
+  font-size: 20px;
   color: rgba(0, 0, 0, 0.7);
   text-decoration: none;
 }
@@ -85,7 +86,6 @@ body {
   align-items: center;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   margin: 0 auto;
   max-width: 2000px;
@@ -103,8 +103,12 @@ body {
   padding: 0 25px;
 }
 
-@media only screen and (max-width: 1065px) {
+@media only screen and (max-width: 1100px) {
   .CurrentTempWrapper {
     margin: 0 0 100px 0;
+  }
+
+  .Wrapper {
+    flex-direction: column;
   }
 }
