@@ -8,6 +8,20 @@ const API_KEY = `6e09301a489266068c89ba255122003e`;
 //localhost:3000/?city=paris
 //created funciton outside the scope of the function below
 //custom abstraction - abstract away URL Search Params here to make it easier to use
+
+function BackgroundColorWeatherType(weatherType, cloudiness) {
+  switch (weatherType) {
+    case "Clear":
+      return `rgba(${195}, ${223}, ${232}, ${0.1 + cloudiness / 100})`; //blue
+    case "Clouds" || "Rain":
+      return `rgba(${146}, ${149}, ${150}, ${0.1 + cloudiness / 100})`; //gray
+    case "Snow":
+      return `rgba(${215}, ${216}, ${217}, ${0.1 + cloudiness / 100})`; //off white
+    default:
+      return `rgba(${249}, ${250}, ${185}, ${0.1 + cloudiness / 100})`; //yellow
+  }
+}
+
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
@@ -69,8 +83,17 @@ function Home() {
     }; //returning an object
   }, [weatherData]);
 
+  const BackgroundColor = BackgroundColorWeatherType(weatherType, cloudiness);
+  console.log(BackgroundColor);
   return (
-    <main className="App">
+    <main
+      className="App"
+      style={{
+        backgroundColor: `rgba(${195}, ${223}, ${232}, ${
+          0.1 + cloudiness / 100
+        })`,
+      }}
+    >
       <header>
         <nav className="CitiesWrapper">
           <a className="CityStyle" href="/?city=paris">
@@ -87,9 +110,7 @@ function Home() {
           </a>
         </nav>
       </header>
-
       <h1 className="TitleStyle">{city}</h1>
-
       <WeatherCard
         cloudiness={cloudiness}
         currentTemp={currentTemp}

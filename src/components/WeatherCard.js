@@ -1,5 +1,5 @@
 import React from "react";
-import WeatherImage, { BackgroundColorWeatherType } from "./WeatherImage";
+import WeatherImage from "./WeatherImage";
 
 function WeatherCard({
   cloudiness,
@@ -11,7 +11,6 @@ function WeatherCard({
   weatherType,
   windSpeed,
 }) {
-  const Backgroundcolor = BackgroundColorWeatherType(weatherType);
   return (
     <div className="Wrapper">
       <div className="CurrentTempWrapper">
