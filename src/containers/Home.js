@@ -9,16 +9,21 @@ const API_KEY = `6e09301a489266068c89ba255122003e`;
 //created funciton outside the scope of the function below
 //custom abstraction - abstract away URL Search Params here to make it easier to use
 
-function BackgroundColorWeatherType(weatherType, cloudiness) {
-  switch (weatherType) {
-    case "Clear":
-      return `rgba(${195}, ${223}, ${232}, ${0.1 + cloudiness / 100})`; //blue
-    case "Clouds" || "Rain":
-      return `rgba(${146}, ${149}, ${150}, ${0.1 + cloudiness / 100})`; //gray
-    case "Snow":
-      return `rgba(${215}, ${216}, ${217}, ${0.1 + cloudiness / 100})`; //off white
-    default:
-      return `rgba(${249}, ${250}, ${185}, ${0.1 + cloudiness / 100})`; //yellow
+function BackgroundColorCloudiness(cloudiness) {
+  if (cloudiness <= 5) {
+    return `rgb(${163}, ${224}, ${247})`; //yelllow
+  }
+  if (cloudiness <= 20 && cloudiness > 5) {
+    return `rgb(${195}, ${223}, ${232})`; //blue
+  }
+  if (cloudiness <= 50 && cloudiness > 20) {
+    return `rgb(${169}, ${177}, ${201})`; //blue
+  }
+  if (cloudiness <= 80 && cloudiness > 50) {
+    return `rgb(${141}, ${151}, ${181})`; //dark blue
+  }
+  if (cloudiness <= 100 && cloudiness > 80) {
+    return `rgb(${146}, ${149}, ${150}`; //gray
   }
 }
 
@@ -83,15 +88,15 @@ function Home() {
     }; //returning an object
   }, [weatherData]);
 
-  const BackgroundColor = BackgroundColorWeatherType(weatherType, cloudiness);
-  console.log(BackgroundColor);
+  const CloudinessColor = BackgroundColorCloudiness(cloudiness); //background color based on cloudiness
+
   return (
     <main
       className="App"
       style={{
-        backgroundColor: `rgba(${195}, ${223}, ${232}, ${
-          0.1 + cloudiness / 100
-        })`,
+        backgroundColor: CloudinessColor,
+        margin: "0",
+        padding: "20px",
       }}
     >
       <header>

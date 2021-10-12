@@ -23,18 +23,25 @@ function WeatherCard({
       </div>
       <div className="Wrapper2">
         <section className="WeatherCard">
-          <p className="CategoryStyle">forecast </p>
-          <div className="WeatherImageWrapper">
-            <WeatherImage weatherType={weatherType} />
+          <div className="ExtraData">
+            <div className="WeatherImageWrapper">
+              <WeatherImage weatherType={weatherType} />
+            </div>
           </div>
-          <p className="CategoryStyle">overcast </p>
-          <p className="DataStyle">{cloudiness}%</p>
         </section>
         <section className="WeatherCard">
-          <p className="CategoryStyle">humidity </p>
-          <p className="DataStyle">{humidity}%</p>
-          <p className="CategoryStyle">wind speed </p>
-          <p className="DataStyle">{windSpeed}mph</p>
+          <div className="ExtraData">
+            <p className="CategoryStyle">humidity </p>
+            <p className="DataStyle">{humidity}%</p>
+          </div>
+          <div className="ExtraData">
+            <p className="CategoryStyle">overcast </p>
+            <p className="DataStyle">{cloudiness}%</p>
+          </div>
+          <div className="ExtraData">
+            <p className="CategoryStyle">wind speed </p>
+            <p className="DataStyle">{windSpeed}mph</p>
+          </div>
         </section>
       </div>
     </div>
